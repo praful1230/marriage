@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Marriage Biodata | Praful</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+
+<style>
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+  font-family:'Poppins',sans-serif;
+}
+
+body{
+  background:linear-gradient(135deg,#fdfbfb,#ebedee);
+  color:#333;
+}
+
+/* ================= HEADER ================= */
+
+header{
+  min-height:100vh;
+  width:100%;
+  position:relative;
+  overflow:hidden;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  text-align:center;
+  padding:20px;
+  color:#fff;
+}
+
+/* Carousel */
+.carousel{
+  position:absolute;
+  inset:0;
+  z-index:1;
+}
+
+.carousel img{
+      position: absolute;
+    /* width: 102%; */
+    height: 100%;
+    object-fit: cover;
+    margin-left: -200px;
+    object-position: center;
+    opacity: 0;
+    transition: opacity 1.5s ease-in-out;
+}
+
+.carousel img.active{
+  opacity:1;
+}
+
+/* Overlay */
+header::after{
+  content:"";
+  position:absolute;
+  inset:0;
+  background:rgba(0,0,0,0.45);
+  z-index:2;
+}
+
+/* Header Content */
+.header-content{
+  position:relative;
+  z-index:3;
+  max-width:90%;
+  display:flex;
+      margin-bottom: -30pc;
+  flex-direction:column;
+  align-items:center;
+}
+
+header h1{
+  font-size:42px;
+  font-weight:600;
+}
+
+header p{
+  font-size:18px;
+  opacity:0.9;
+  margin-top:8px;
+}
+
+/* Profile Photo */
+.photo{
+  margin-top:25px;
+}
+
+.photo img{
+  width:160px;
+  height:160px;
+  border-radius:50%;
+  border:5px solid rgba(255,255,255,0.85);
+  object-fit:cover;
+}
+
+/* Dots */
+.dots{
+  position:absolute;
+  bottom:20px;
+  display:flex;
+  gap:8px;
+  z-index:4;
+}
+
+.dot{
+  width:8px;
+  height:8px;
+  border-radius:50%;
+  background:rgba(255,255,255,0.5);
+}
+
+.dot.active{
+  background:#fff;
+}
+
+/* ================= CONTENT ================= */
+
+.container{
+  max-width:1100px;
+  margin:auto;
+  padding:40px 20px;
+}
+
+.card{
+  background:rgba(255,255,255,0.9);
+  backdrop-filter:blur(10px);
+  border-radius:18px;
+  padding:30px;
+  margin:30px 0;
+  box-shadow:0 10px 30px rgba(0,0,0,0.1);
+}
+
+h2{
+  margin-bottom:20px;
+  font-weight:600;
+  color:#5a2fdc;
+}
+
+.grid{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:18px;
+}
+
+.grid p{
+  background:#f7f7ff;
+  padding:12px 15px;
+  border-radius:10px;
+  font-size:15px;
+}
+
+.grid span{
+  font-weight:500;
+  color:#333;
+}
+
+/* ================= FOOTER ================= */
+
+footer{
+  text-align:center;
+  padding:30px 20px;
+  background:#111;
+  color:#bbb;
+}
+
+/* ================= RESPONSIVE ================= */
+
+@media(max-width:768px){
+  header h1{font-size:28px;}
+  header p{font-size:14px;}
+  .grid{grid-template-columns:1fr;}
+}
+
+@media(max-width:600px){
+  header{min-height:85vh;}
+  .photo img{
+    width:110px;
+    height:110px;
+  }
+}
+</style>
+</head>
+
+<body>
+
+<header>
+
+  <div class="carousel">
+    <img src="1.png" class="active">
+    <!-- <img src="2.png"> -->
+    <img src="3.png">
+    <img src="4.png">
+    <img src="5.png">
+  </div>
+
+  <div class="header-content">
+    <h1>Praful Yadav</h1>
+    <p>Software Engineer | Educator | Entrepreneur</p>
+
+    <!-- <div class="photo">
+      <img src="1.jpg" alt="Profile Photo">
+    </div> -->
+  </div>
+
+  <div class="dots">
+    <span class="dot active"></span>
+    <span class="dot"></span>
+    <span class="dot"></span>
+    <span class="dot"></span>
+    <span class="dot"></span>
+  </div>
+
+</header>
+
+<div class="container">
+
+  <div class="card">
+    <h2>Personal Details</h2>
+    <div class="grid">
+      <p><span>Date of Birth:</span> 24-01-2003</p>
+      <p><span>Age:</span> 22 Years</p>
+      <p><span>Height:</span> 5'8"</p>
+      <p><span>Blood Group:</span> B+</p>
+      <p><span>Marital Status:</span> Never Married</p>
+    </div>
+  </div>
+
+  <div class="card">
+    <h2>Education & Profession</h2>
+    <div class="grid">
+      <p><span>Qualification:</span> B.Tech (CSE)</p>
+      <p><span>Profession:</span> Software Engineer & Instructor</p>
+      <p><span>Role:</span> Founder & CEO (Codebook Solution, Workrabbits)</p>
+      <p><span>Other:</span> UPSC CSE Aspirant</p>
+      <p><span>Company:</span> Algotutor</p>
+      <p><span>Annual Package:</span> 15 LPA</p>
+      <p><span>Work Location:</span> India</p>
+    </div>
+  </div>
+
+  <div class="card">
+    <h2>Family Details</h2>
+    <div class="grid">
+      <p><span>Father:</span> Mr. Shiv Singh Yadav</p>
+      <p><span>Occupation:</span> Commissioned Officer (Indian Army)</p>
+      <p><span>Mother:</span> Mrs. Kavita Yadav</p>
+      <p><span>Occupation:</span> Homemaker & Politician</p>
+      <p><span>Siblings:</span> 2 Younger Brothers, 1 Sister</p>
+    </div>
+  </div>
+
+  <div class="card">
+    <h2>Religious Details</h2>
+    <div class="grid">
+      <p><span>Religion:</span> Hindu</p>
+      <p><span>Caste:</span> Yadav</p>
+      <p><span>Gotra:</span> Adwa</p>
+      <p><span>Manglik:</span> No</p>
+    </div>
+  </div>
+
+  <div class="card">
+    <h2>Contact Details</h2>
+    <div class="grid">
+      <p><span>Mobile:</span> +91 6396553232</p>
+      <p><span>Email:</span> prafulyadav880@gmail.com</p>
+      <p><span>City:</span> Aligarh</p>
+    </div>
+  </div>
+
+</div>
+
+<footer>
+  <p>Designed with ❤️ by Praful Yadav</p>
+</footer>
+
+<script>
+const slides = document.querySelectorAll(".carousel img");
+const dots = document.querySelectorAll(".dot");
+let index = 0;
+let startX = 0;
+
+function showSlide(i){
+  slides.forEach(s => s.classList.remove("active"));
+  dots.forEach(d => d.classList.remove("active"));
+  slides[i].classList.add("active");
+  dots[i].classList.add("active");
+}
+
+setInterval(() => {
+  index = (index + 1) % slides.length;
+  showSlide(index);
+}, 4000);
+
+header.addEventListener("touchstart", e => {
+  startX = e.touches[0].clientX;
+});
+
+header.addEventListener("touchend", e => {
+  let endX = e.changedTouches[0].clientX;
+  if(startX - endX > 50) index = (index + 1) % slides.length;
+  if(endX - startX > 50) index = (index - 1 + slides.length) % slides.length;
+  showSlide(index);
+});
+</script>
+
+</body>
+</html>
